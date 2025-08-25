@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  --color-search-surface: #f0f0f0;
+  --color-search-placeholder: #909090;
+  --font-integral: "Integral CF", sans-serif;
+  --font-integral-demi: "Integral CF Demi", sans-serif;
+  --font-integral-extra: "Integral CF Extra", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-satoshi-italic: "Satoshi Italic", sans-serif;
+  --font-satoshi-light: "Satoshi Light", sans-serif;
+  --font-satoshi-light-italic: "Satoshi Light Italic", sans-serif;
+  --font-satoshi-medium: "Satoshi Medium", sans-serif;
+  --font-satoshi-medium-italic: "Satoshi Medium Italic", sans-serif;
+  --font-satoshi-bold: "Satoshi Bold", sans-serif;
+  --font-satoshi-bold-italic: "Satoshi Bold Italic", sans-serif;
+  --font-satoshi-black: "Satoshi Black", sans-serif;
+  --font-satoshi-black-italic: "Satoshi Black Italic", sans-serif;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+.font-integral {
+  font-family: var(--font-integral);
+}
+
+.font-integral-demi {
+  font-family: var(--font-integral-demi);
+}
+
+.font-integral-extra {
+  font-family: var(--font-integral-extra);
+}
+
+.font-satoshi {
+  font-family: var(--font-satoshi);
+}
+
+.font-satoshi-italic {
+  font-family: var(--font-satoshi-italic);
+}
+
+.font-satoshi-light {
+  font-family: var(--font-satoshi-light);
+}
+
+.font-satoshi-light-italic {
+  font-family: var(--font-satoshi-light-italic);
+}
+
+.font-satoshi-medium {
+  font-family: var(--font-satoshi-medium);
+}
+
+.font-satoshi-medium-italic {
+  font-family: var(--font-satoshi-medium-italic);
+}
+
+.font-satoshi-bold {
+  font-family: var(--font-satoshi-bold);
+}
+
+.font-satoshi-bold-italic {
+  font-family: var(--font-satoshi-bold-italic);
+}
+
+.font-satoshi-black {
+  font-family: var(--font-satoshi-black);
+}
+
+.font-satoshi-black-italic {
+  font-family: var(--font-satoshi-black-italic);
+}
+
+/* Hide the default number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
