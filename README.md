@@ -1,62 +1,88 @@
-# Skin Clinic Ecommerce Demo
+# Skin Clinic Ecommerce
 
-This is a demo ecommerce frontend built with **Next.js + TypeScript**.
-It was created as part of a coding exercise to demonstrate **accessible, performant, and maintainable React development** with a focus on:
+A modern ecommerce frontend built with **Next.js 15 + TypeScript** showcasing best practices in frontend development with a focus on:
 
-- **Storybook-first workflow**
-- **Accessibility (WCAG 2.1 AA)** as a baseline requirement
-- **Visual regression testing with Chromatic**
-- **Clean GitLab issue/branch workflow** to simulate real-world collaboration
-- **Headless ecommerce patterns** (data pulled from [Dummy JSON](https://dummyjson.com/))
-
----
-
-## What’s Implemented
-
-- **Core pages**
-  - `/` Home – minimal landing
-  - `/products` – product grid (responsive, keyboard navigable, skeleton loading)
-  - `/products/[id]` – product details (semantic structure, alt text, accessible image gallery)
-  - `/cart` – cart with add/remove/update, `aria-live` announcements, persisted state (Zustand)
-
-- **Design system slice**
-  - Accessible primitives: `Button`, `Heading`, `Link`, `Text`
-  - Ecommerce components: `ProductCard`, `ProductGrid`, `ProductDetails`, `CartItem`, `CartSummary`
-
-- **Tooling & quality**
-  - TypeScript strict mode
-  - ESLint + Prettier + Husky (commit hooks)
-  - Storybook with a11y addon & test runner
-  - Chromatic CI for visual regression testing
-  - Lighthouse a11y score ≥ 90
+- **Component-driven development** with Storybook
+- **Accessibility (WCAG 2.1 AA)** compliance
+- **Visual regression testing** via Chromatic
+- **Modern React patterns** (App Router, React Query, Zustand)
+- **Type safety** with TypeScript and Zod validation
 
 ---
 
-## What’s Not In Scope (Deliberately)
+## Features
 
-To keep the demo **focused and achievable in a few days**, the following were **not implemented**:
+- **Product Browsing**
+  - Responsive product grid with skeleton loading states
+  - Product filtering by category
+  - Product detail pages with image galleries
+  - Search functionality
 
-- Authentication / user accounts
-- Checkout or payments
-- Advanced PWA features beyond installability/offline fallback
-- Full design system (only a small slice provided)
+- **Shopping Experience**
+  - Add/remove products to cart
+  - Update quantities with accessible controls
+  - Persistent cart state with Zustand
+  - Checkout flow (basic implementation)
 
-This lets reviewers focus on **code quality, structure, accessibility, and workflow**, not completeness of ecommerce features.
+- **UI Components**
+  - Accessible primitives: `Button`, `Rating`, `SearchForm`
+  - Layout components: `Header`, `Footer`, `Breadcrumb`, `PromoBanner`
+  - E-commerce components: Product cards, loaders, modals
+  - Form components with validation
+
+- **Technical Implementation**
+  - Next.js App Router for routing and layouts
+  - React Query for data fetching and caching
+  - Zustand for state management
+  - Zod for runtime type validation
+  - TanStack Query for data fetching
+  - Tailwind CSS for styling
 
 ---
 
+## Quality Assurance
 
-## Root Structure
+- **Accessibility**
+  - Semantic HTML structure
+  - ARIA attributes for dynamic content
+  - Keyboard navigation support
+  - Screen reader announcements for cart updates
+
+- **Testing & Quality**
+  - Component testing with Vitest
+  - Storybook with a11y addon
+  - Visual regression testing with Chromatic
+---
+
+## Project Structure
 
 ```
 /
-├── docs/                 # Documentation files (Markdown)
-├── public/               # Static assets
-├── src/                  # Source code
+├── public/               # Static assets and fonts
+├── src/
 │   ├── app/              # Next.js app router pages
+│   │   ├── cart/         # Cart page
+│   │   ├── checkout/     # Checkout page
+│   │   ├── products/     # Product listing and details
+│   │   └── search/       # Search functionality
 │   ├── components/       # Shared UI components
+│   │   ├── layout/       # Layout components (header, footer, etc.)
+│   │   └── ui/           # UI primitives and shared components
 │   ├── features/         # Feature-based modules
-│   └── lib/              # Shared utilities and hooks
+│   │   ├── cart/         # Cart functionality
+│   │   └── products/     # Product browsing functionality
+│   └── lib/              # Shared utilities, hooks, and API
 ├── .storybook/           # Storybook configuration
 └── [config files]        # Configuration files
 ```
+
+---
+
+## Data Integration
+
+The application integrates with [DummyJSON](https://dummyjson.com/) for product data, demonstrating headless e-commerce patterns with:
+
+- Type-safe API integration
+- Data validation with Zod schemas
+- Optimistic UI updates
+- Error handling and fallbacks
